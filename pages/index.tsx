@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -15,9 +16,9 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to{" "}
-          <a href="https://github.com/mubeenkh4u/Next-Test">
-            my Vercel Hubspot Integration!
-          </a>
+          <Link href="https://github.com/mubeenkh4u/Next-Test">
+            <a> my Vercel Hubspot Integration! </a>
+          </Link>
         </h1>
 
         <p className={styles.description}>
@@ -26,45 +27,52 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="/api/search/crm" className={styles.card}>
-            <h2>Search &rarr;</h2>
-            <p>
-              Search my hubspot for the random contacts that I have made using
-              Fakerjs.
-            </p>
-          </a>
+          <Link href="/api/search/crm">
+            <a className={styles.card}>
+              <h2>Search &rarr;</h2>
+              <p>
+                Search my hubspot for the random contacts that I have made using
+                Fakerjs.
+              </p>
+            </a>
+          </Link>
 
-          <a href="/api/create/crm" className={styles.card}>
-            <h2>Create a contact on my hubspot space &rarr;</h2>
-            <p>Create a contact using this place.</p>
-          </a>
+          <Link href="/api/create/crm">
+            <a className={styles.card}>
+              <h2>Create a contact on my hubspot space &rarr;</h2>
+              <p>Create a contact using this place.</p>
+            </a>
+          </Link>
 
-          <a href="/api/batch/crm" className={styles.card}>
-            <h2>Batch Create &rarr;</h2>
-            <p>
-              Batch create fake contact information using this card, create 10
-              at random.
-            </p>
-          </a>
+          <Link href="/api/batch/crm">
+            <a className={styles.card}>
+              <h2>Batch Create &rarr;</h2>
+              <p>
+                Batch create fake contact information using this card, create 10
+                at random.
+              </p>
+            </a>
+          </Link>
 
-          <a
-            href="https://github.com/mubeenkh4u/Next-Test"
-            className={styles.card}
-          >
-            <h2>Browse this project on my GitHub. &rarr;</h2>
-            <p>
-              The project is hosted on github, you can browse the code here.
-            </p>
-          </a>
+          <Link href="https://github.com/mubeenkh4u/Next-Test">
+            <a className={styles.card}>
+              <h2>Browse this project on my GitHub. &rarr;</h2>
+              <p>
+                The project is hosted on github, you can browse the code here.
+              </p>
+            </a>
+          </Link>
 
-          <a href="https://github.com/DrySpell" className={styles.card}>
-            <h2>
-              My mentor and friend who helped me with this project. &rarr;
-            </h2>
-            <p>
-              The project is hosted on github, you can browse the code here.
-            </p>
-          </a>
+          <Link href="https://github.com/DrySpell">
+            <a className={styles.card}>
+              <h2>
+                My mentor and friend who helped me with this project. &rarr;
+              </h2>
+              <p>
+                The project is hosted on github, you can browse the code here.
+              </p>
+            </a>
+          </Link>
         </div>
       </main>
 
