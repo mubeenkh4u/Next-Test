@@ -9,18 +9,18 @@ import { Faker, faker } from "@faker-js/faker";
 const headers = {
   "Content-Type": "application/json",
   Accept: "application/json",
-  Authorization: "Bearer " + process.env.HUBSPOT_API_KEY,
+  Authorization: "Bearer " + process.env.HUBSPOT_TOKEN,
 };
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const hapikey = process.env.HUBSPOT_TOKEN;
   console.log("----------------------------------------------------");
   console.log("Method", req.method); // adding "Method" in quotes helps us look at console logs to know what stuff I am getting back.
   console.log("Query", req.query);
   const baseUrl = "https://api.hubapi.com";
   const query = req.query.query || "";
+  const limit = req.query.limit || 10;
   const endpoint = req.query.endpoint;
   const entity = req.query.entity || "contacts";
   console.log("Body", req.body);
@@ -32,7 +32,7 @@ export default async function handler(
       {
         method: "POST",
         headers,
-        body: JSON.stringify({ query: query }),
+        body: JSON.stringify({ query, limit }),
       }
     )
       .then((response) => {
