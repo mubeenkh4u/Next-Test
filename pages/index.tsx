@@ -65,9 +65,10 @@ const Home: NextPage = () => {
 
           <Link href="https://github.com/DrySpell">
             <a className={styles.card}>
-              <h2>
-                My mentor and friend who helped me with this project. &rarr;
-              </h2>
+              <h2>DrySpell &rarr;</h2>
+              <p>
+                DrySpell is my friend and mentor during the course of project.
+              </p>
             </a>
           </Link>
         </div>
