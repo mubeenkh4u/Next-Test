@@ -51,7 +51,7 @@ const Home: NextPage = () => {
             href="https://github.com/mubeenkh4u/Next-Test"
             className={styles.card}
           >
-            <h2>Source Code. &rarr;</h2>
+            <h2>Browse this project on my GitHub. &rarr;</h2>
             <p>
               The project is hosted on github, you can browse the code here.
             </p>
@@ -61,7 +61,9 @@ const Home: NextPage = () => {
             <h2>
               My mentor and friend who helped me with this project. &rarr;
             </h2>
-            <p>View his projects here!</p>
+            <p>
+              The project is hosted on github, you can browse the code here.
+            </p>
           </a>
         </div>
       </main>
