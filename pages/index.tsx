@@ -26,10 +26,7 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a
-            href="next-test-gold-delta.vercel.app/api/search/crm"
-            className={styles.card}
-          >
+          <a href="/api/search/crm" className={styles.card}>
             <h2>Search &rarr;</h2>
             <p>
               Search my hubspot for the random contacts that I have made using
@@ -37,18 +34,12 @@ const Home: NextPage = () => {
             </p>
           </a>
 
-          <a
-            href="next-test-gold-delta.vercel.app/api/create/crm"
-            className={styles.card}
-          >
+          <a href="/api/create/crm" className={styles.card}>
             <h2>Create a contact on my hubspot space &rarr;</h2>
             <p>Create a contact using this place.</p>
           </a>
 
-          <a
-            href="next-test-gold-delta.vercel.app/api/batch/crm"
-            className={styles.card}
-          >
+          <a href="/api/batch/crm" className={styles.card}>
             <h2>Batch Create &rarr;</h2>
             <p>
               Batch create fake contact information using this card, create 10
