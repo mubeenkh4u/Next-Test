@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Faker, faker } from "@faker-js/faker";
+import * as dfd from "danfojs";
 
 // type Data = {
 //   status: string;
@@ -41,7 +42,7 @@ export default async function handler(
       .then((data) => {
         return data;
       });
-    return res.status(200).json({ status: "Success", message: crmdata });
+    return res.status(200).json(crmdata.results);
   }
   if (endpoint === "batch") {
     let contacts = [];
@@ -81,7 +82,7 @@ export default async function handler(
       .catch((err) => {
         console.log(err);
       });
-    return res.status(200).json({ status: "Success", message: crmdata });
+    return res.status(200).json(crmdata.results);
   }
   if (endpoint === "create") {
     const body = req.query.fake
@@ -117,7 +118,7 @@ export default async function handler(
       .catch((err) => {
         console.log(err);
       });
-    return res.status(200).json({ status: "Success", message: crmdata });
+    return res.status(200).json(crmdata.results);
   }
   return res.status(400).json({ status: "Error", message: "Invalid endpoint" });
 }
